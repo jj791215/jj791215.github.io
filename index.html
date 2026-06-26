@@ -35,12 +35,22 @@
             max-width: 480px; /* 모바일 화면 너비 최적화 */
         }
 
-        h1 {
+        /* 상단 타이틀 & 만든이 영역 스타일 */
+        .header-area {
             text-align: center;
-            font-size: 24px;
             margin: 15px 0 25px 0;
+        }
+
+        h1 {
+            font-size: 24px;
             color: var(--primary-color);
             font-weight: 700;
+        }
+
+        .made-by {
+            font-size: 12px;
+            color: #888;
+            margin-top: -3px; /* 타이틀과 조금 더 가깝게 붙임 */
         }
 
         /* 섹션(카드) 스타일 */
@@ -153,7 +163,11 @@
 <body>
 
 <div class="container">
-    <h1>안산벙벙벙 정산 🥕</h1>
+    <!-- 상단 영역: 타이틀 & 만든이 -->
+    <div class="header-area">
+        <h1>안산벙벙벙 정산 🥕</h1>
+        <p class="made-by">made by 민초</p>
+    </div>
 
     <!-- 섹션 1: 안방규칙대로 -->
     <div class="section-card">
@@ -179,7 +193,7 @@
         <div class="result-box" id="ab-result">
             <div class="result-line"><span>남자 최종 정산금액:</span> <span id="res-man" class="highlight">0원</span></div>
             <div class="result-line"><span>여자 최종 정산금액:</span> <span id="res-woman" class="highlight">0원</span></div>
-            <div class="surplus" id="ab-surplus">정산 후 남는 금액: 0원</div>
+            <div class="surplus" id="ab-surplus">정산 후 남는 금액(잉여): 0원</div>
         </div>
     </div>
 
@@ -198,7 +212,7 @@
 
         <div class="result-box" id="n-result">
             <div class="result-line"><span>1인당 정산 금액:</span> <span id="res-n" class="highlight">0원</span></div>
-            <div class="surplus" id="n-surplus">정산 후 남는 금액: 0원</div>
+            <div class="surplus" id="n-surplus">정산 후 남는 금액(잉여): 0원</div>
         </div>
     </div>
 </div>
